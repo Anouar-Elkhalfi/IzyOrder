@@ -28,7 +28,7 @@ gem "stimulus-rails"
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
 # qr code
-# gem 'rqrcode'
+gem 'rqrcode'
 
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
