@@ -1,10 +1,10 @@
 <p>hello from : app/views/menu_items/index.html.erb</p>
 <h1>Menu</h1>
-<%# <div>
-  <%= image_tag @qr_code.to_data_url %>
-<%# </div> %>
 <ul>
   <% @menu_items.each do |menu_item| %>
-    <li><%= menu_item.name %> - <%= number_to_currency(menu_item.price) %></li>
+    <li>
+      <%= link_to menu_item.name, menu_item_path(menu_item) %> - <%= number_to_currency(menu_item.price) %>
+    </li>
   <% end %>
 </ul>
+

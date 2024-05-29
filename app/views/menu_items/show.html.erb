@@ -1,0 +1,6 @@
+<P>WELCOME : app/views/menu_items/show.html.erb </P>
+<h1><%= @menu_item.name %></h1>
+<p><%= @menu_item.description %></p>
+<p><%= number_to_currency(@menu_item.price) %></p>
+<%= link_to 'Back to Menu', menu_items_path %>
+

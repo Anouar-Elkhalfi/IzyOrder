@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>welcome : app/views/orders/show.html.erb</p>
+      <h1>Order Details</h1>
+      <ul>
+        <% @order.order_items.each do |item| %>
+          <li>
+            <%= item.menu_item.name %> - <%= item.quantity %> - <%= number_to_currency(item.menu_item.price * item.quantity) %>
+          </li>
+        <% end %>
+      </ul>
+      <p>Total: <%= number_to_currency(@order.total_price) %></p>
+      <%= link_to "Proceed to Payment", new_order_payment_path(@order) %>
+
+    </div>
+  </div>
+</div>
